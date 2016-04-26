@@ -1,0 +1,53 @@
+PACT-Analyse für Aufgabe 1)
+Ziel des Projekts: Navigationsgerät für die Inuit => Navigation um die Küste soll erleichtert werden
+	Activities: mit dem Navigationsgerät an der Küste Grönlands rumfahren
+				Uhreinwohner, keine Erfahrung mit Navigationsgeräten
+Benutzer/People: Inuit
+Technology: Navigationsgerät
+Context: Rahmenbedingungen, Grönland, keine Elektrizität
+
+- Ausgangsinformationen sind schlecht gewählt
+
+Model Human Processor => es geht um bewusste Aufgaben, nicht z.B. unterbewusstes Blinzeln des Auges
+- präattentiv (bevor die eigentliche Aufmerksamkeit passiert)
+	Bsp: blauer Buchstabe, den man sofort erkennt
+- attentiv => von Allgemeine P. I
+	Bsp: 
+- Perzeptueller Prozessor T(P) = 100 [50 ~ 200] ms
+- Kognitiver Prozessor T(C) = 100 [25 ~ 170] ms
+- Motorischer Prozessor  T(M) = 100 [70 ~ 360] ms
+	=> bei 1x Klatschen: T(P) + T(C) + T(M)
+	=> bei 2x Klatschen: T(P) + 2 * T(C) + T(M)
+		weil den ersten Kreis haben wir bereits verarbeitet, d.h. wir wissen bereits (im Arbeitsgedächtnis) dass etwas kommt und vergleichen nur noch (der Vergleich kostet 2 * T(C) ms)
+
+Rule 161.2: zu schneller Start nach dem Signal führt zur Disqualifikation (Reaktionszeit)
+	=> Person hatte vor vorher zu starten
+	=> Addition des perzeptuellen, kognitiven und motorischen Prozessors >= 100 m/s
+
+Multi-Speicher-Modell
+Stimuli => Sensorisches Register (ikonisch, echoisch, haptisch) => Aufmerksamkeit => Arbeits- bzw. Kurzzeitgedächtnis) <=> Memorieren / Erinnern (back) <=> Langzeitgedächtnis
+- im Langzeitgedächtnis bleiben Informationen erhalten, können nur noch überlagert werden mit anderen Informationen
+- Arbeitsgedächtnismodell
+
+Primär- und Rezenzeffekt
+- man kann sich immer das erste und/oder die letzte Information merken
+
+=========================================================
+Übungszettel 2 - Aufgabe 3)
+Naive Benutzer:		T = b * n
+Erfahrene Benutzer:	T = b * log (n + 1)		Hick's Law
+
+1. Welche Menüanordnung minimiert die Auswahlzeiten für naive Benutzer?
+	T(1) = b * 6
+	T(2) = b * 4 + b * 3 = b * 7
+	T(3) = b * 2 + b * 2 + b * 4 = b * 8
+	
+	Am schnellsten, wenn man alle Optionen gleichzeitig einblendet - also 1. Menüanordnung
+	
+2. Welche Menüanordnung minimiert die Auswahlzeiten für erfahrene Benutzer?
+	T(1) = b * log (6 + 1) = b * log (7) = 2,807 * b
+	T(2) = b * log (4 + 1) + b * log (3 + 1) + b = b * log (5) + b * log (4) = b * 2,3219 + b * 2 = 4,3219 * b
+	T(3) = b * log (2 + 1) +  b * log (2 + 1) + b * log (4 + 1) = b * log (3) + b * log(3) + b * log(5) = b + b + b * 2,3219 = 4,3219 * b
+	
+	Am schnellsten, wenn man alle Optionen gleichzeitig einblendet - also 1. Menüanordnung
+	

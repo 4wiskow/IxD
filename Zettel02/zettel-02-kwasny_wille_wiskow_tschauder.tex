@@ -1,0 +1,42 @@
+\documentclass[a4paper,10pt]{article}
+
+% Hier die Nummer des Blatts und Autoren angeben.
+\newcommand{\blatt}{2}
+\newcommand{\autor}{Brigitte Kwasny, Frederik Wille, Marian Wiskow, Tim Tschauder}
+
+\usepackage{hci}
+
+\begin{document}
+% Seitenkopf mit Informationen
+\kopf
+
+\renewcommand{\figurename}{Figure}
+\aufgabe{1}
+
+Das von S.K. Card und anderen erstellte Thought Paper \"The Model Human Processor: An Engineering Model of Human Performance\" beschäftigt sich mit dem im Titel erwähnten Model Human Processor, welches die Arbeitsweise des menschlichen Gehirns darstellen soll. Diese Darstellung soll vorallem Menschen aus technischen Bereichen helfen, da die von der Psychologie erarbeiteten Erkenntnisse nicht einfach verwendbar sind. Das Modell soll durch Approximation und flexibilität als Framework fungieren und durch weitere Erkenntnisse angepasst werden können. \\
+Prozessor, Gedächtnis, die Verbindungen zwischen diesen und die sogenannten \"Principles of Operation\" bilden die Elemente des Modells. Das Gedächtnis hat eine Kapazität, Vergessenszeit und Kodierungstyp
+(z.B. sensorisch). Die Prozessoren heißen Perzeptuell, Kognitiv und Motor, und besitzen alle eine unter-
+schiedliche Zykluszeit. Sie können sowohl sequentiell als auch parallel laufen. Das Arbeitsgedächtnis wird vom sogenannten \"recognize-act-cycle\" verarbeitet. Hierbei löst der Inhalt des Arbeitsgedächtnis assoziative Aktionen aus. \\
+Mit Wissen über die Dauer der ablaufenden Prozessen lässt sich eine Prognose für die Performanz eines Menschen zu einer gewissen Aufgabe errechnen. Dies wird anhand von fünf Beispielen verdeutlicht. Beim Ersten wird die für eine Illusion einer Bewegung nötige Framerate berechnet. Das Zweite zeigt den maximalen Abstand von Frames, damit eine Kollision zweier Objekte und die darausfolgenden Bewegungen als solche Wahrgenommen werden. Eine maximale Lesegeschwindigkeit wird beim dritten Beispiel berechnet. Nummer vier zeigt die benötigte Zeit um mit der Maus einen Button zuerreichen. Und zu Letzt wird berechnet, wie lange ein Mensch zur Entscheidungsfindung bei einer Aufgabe benötigt.\\
+\aufgabe{3}
+\begin{enumerate}
+
+\item Welche Menüanordnung minimiert die Auswahlzeiten für naive Benutzer?\\
+\begin{enumerate}
+\item $T(1) = b * 6$ \\
+\item $T(2) = b * 4 + b * 3 = b * 7$ \\
+Es werden sowohl die direkten Optionen als auch die in der Gruppe betrachtet.\\
+\item $T(3) = b * 2 + b * 2 + b * 4 = b * 8$ \\
+Worst case: gesuchte Option wird erst in der zweiten Gruppe gefunden. \\
+\end{enumerate}
+Am schnellsten, wenn man alle Optionen gleichzeitig einblendet - also 1. Menüanordnung
+\item Welche Menüanordnung minimiert die Auswahlzeiten für erfahrene Benutzer? \\
+\begin{enumerate}
+\item $T(1) = b * log_2(6 + 1) = b * log_2(7) = 2,807 * b$ \\
+\item $T(2) = b * log_2(4 + 1) + b * log_2(3 + 1) = b * log_2(5) + b * log_2(4) = b * 2,3219 + b * 2 = 4,3219 * b$ \\
+\item $T(3) = b * log_2(2 + 1) + b * log_2(4 + 1) = b * log_2(3) + b * log_2(3) + b * log_2(5) = b + b + b * 2,3219 = 4,3219 * b$ \\
+Der erfahrene Benutzer weiß in welcher Gruppe sich die gesuchte Option befindet.
+\end{enumerate}
+Am schnellsten, wenn man alle Optionen gleichzeitig einblendet - also 1. Menüanordnung
+\end{enumerate}
+\end{document}

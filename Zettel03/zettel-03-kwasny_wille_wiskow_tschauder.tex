@@ -1,0 +1,28 @@
+\documentclass[a4paper,10pt]{article}
+
+% Hier die Nummer des Blatts und Autoren angeben.
+\newcommand{\blatt}{3}
+\newcommand{\autor}{Frederik Wille}
+
+\usepackage{hci}
+
+\begin{document}
+% Seitenkopf mit Informationen
+\kopf
+
+\renewcommand{\figurename}{Figure}
+\aufgabe{5}
+Es wird davon ausgegangen, dass das System sofort reagiert und keine Zeit durch Warten auf eine Systemantwort verloren geht. Außerdem wird als Browser ``Firefox'' verwendet.
+\begin{enumerate}
+    \item Bestcase: \\
+        Der User startet den Browser durch drücken einer spezial Taste(K) auf seiner Tastatur. Sobald der Browser gestartet ist, befindet sich der cursor bereits im Adressfeld, welches auch als Suchfeld für google genutzt werden kann, sodass der User direkt los tippen kann(T(n)). Die Eingabe wird durch drücken von Enter bestätigt(K). \\
+        $K+T(18)+K=K+18*K+K=20*K=20*0.28s=5.6s$
+    \item Worstcase: \\
+        Der User sucht den Browser über das Startmenü(Windows): er öffnet das Startmenü mit der Maus(P), klickt in das Suchfeld(BB), gibt den Namen des Browsers in das Suchfeld ein(H+T(n)) und startet den Browser mit einem Mausclick(H+BB). Im Browser wird das Adressfeld mit der Maus ausgewählt(P+BB), ``google.de'' eingetippt(H+T(n)) und durch Klicken auf den Pfeil die Seite aufgerufen(H+P+BB). Auf der Seite wird nun mit der Maus das Suchfeld ausgewählt(P+BB) und der Suchbegriff eingegeben(H+T(n)). Dieser wird durch Klick auf ``Suchen'' bestätigt(H+P+BB). \\
+        $P+BB+H+T(7)+H+BB+P+BB+H+T(9)+H+P+BB+P+BB+H+T(18)+H+P+BB$ \\
+        $=1.1s+0.2s+0.4s+7*0.28s+0.4s+0.2s+1.1s+0.2s+0.4s+9*0.28s+0.4s+1.1s+0.2s+1.1s+0.2s+18*0.28s+0.4s+1.1s+0.2s$ \\
+        $=18.2s$ \\
+\end{enumerate}
+Der worstcase is hier $325\%$ langsamer als der bestcase.
+
+\end{document}
