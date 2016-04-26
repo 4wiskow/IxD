@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.math.*;
+import java.util.ArrayList;
 
 public class PACT {
     public static void main(String[] args) {
@@ -15,12 +16,13 @@ public class PACT {
 
 class SimpleExampleGUI extends JFrame {
     private JButton m_Btn = new JButton("Click me!");
-    
+
     SimpleExampleGUI() {
+        buildMenu();
         JPanel content = new JPanel();
         content.setLayout(new FlowLayout());
         content.add(m_Btn);
-        
+
         this.setContentPane(content);
         this.pack();
 
@@ -29,5 +31,22 @@ class SimpleExampleGUI extends JFrame {
                // ...
             }
         });
+    }
+
+    private void buildMenu() {
+        JMenuBar menuBar;
+        JRadioButtonMenuItem rbMenuItem;
+        JCheckBoxMenuItem cbMenuItem;
+
+        menuBar = new JMenuBar();
+
+        ArrayList <JMenu> menus = new ArrayList();
+        menus.add(new JMenu("File"));
+        menus.add(new JMenu("Datenbank"));
+        menus.add(new JMenu("Fenster"));
+        menus.add(new JMenu("Hilfe"));
+        menus.forEach((menu) -> menuBar.add(menu));
+
+        setJMenuBar(menuBar);
     }
 }
