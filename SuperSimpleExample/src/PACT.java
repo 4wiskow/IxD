@@ -83,8 +83,8 @@ class SimpleExampleGUI extends JFrame
         option.setOptions(options);
         
         // Panel inside the Optionpane to prevent Textfields being positioned under the buttons. Dunno if necessary.
-        JPanel panel = new JPanel();
-        option.add(panel, 0);
+        //JPanel panel = new JPanel();
+        //option.add(panel, 0);
         nutzerHinzu.add(option);
 
         GridBagLayout layout = new GridBagLayout();
@@ -95,53 +95,53 @@ class SimpleExampleGUI extends JFrame
         c.gridy = 0;
         c.fill = c.HORIZONTAL;
         layout.setConstraints(name, c);
-        panel.add(name, c);
+        option.add(name, c);
         c.gridx = 1;
         c.gridy = 0;
         layout.setConstraints(nameFeld, c);
-        panel.add(nameFeld, c);
+        option.add(nameFeld, c);
         
         c.gridx = 0;
         c.gridy = 1;
         layout.setConstraints(id, c);
-        panel.add(id, c);
+        option.add(id, c);
         c.gridx = 1;
         c.gridy = 1;
         layout.setConstraints(idFeld, c);
-        panel.add(idFeld, c);
+        option.add(idFeld, c);
 
         
         c.gridx = 0;
         c.gridy = 2;
         layout.setConstraints(adresse, c);
-        panel.add(adresse, c);
+        option.add(adresse, c);
         c.gridx = 1;
         c.gridy = 2;
         layout.setConstraints(adressFeld, c);
-        panel.add(adressFeld, c);
+        option.add(adressFeld, c);
 
         
         c.gridx = 0;
         c.gridy = 3;
         layout.setConstraints(geburt, c);
-        panel.add(geburt, c);
+        option.add(geburt, c);
         c.gridx = 1;
         c.gridy = 3;
         layout.setConstraints(geburtsFeld, c);
-        panel.add(geburtsFeld, c);
+        option.add(geburtsFeld, c);
 
         
         c.gridx = 0;
         c.gridy = 4;
         layout.setConstraints(aufnahme, c);
-        panel.add(aufnahme, c);
+        option.add(aufnahme, c);
         c.gridx = 1;
         c.gridy = 4;
         layout.setConstraints(aufnahmeFeld, c);
-        panel.add(aufnahmeFeld, c);
+        option.add(aufnahmeFeld, c);
 
         // Pack and launch dialog.
-        panel.setLayout(layout);
+        option.setLayout(layout);
         nutzerHinzu.pack();
         nutzerHinzu.setVisible(true);
 
